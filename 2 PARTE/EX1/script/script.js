@@ -51,3 +51,6 @@ class Cotxe extends Vehicle{
 
 let c1 = new Cotxe("Seat", 2020, 5);
 console.log(c1.info());
+
+//EX3
+

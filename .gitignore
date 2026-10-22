@@ -13,4 +13,5 @@ docker/mongo-data/
 
 node_modules/
 dist/
+*.zip
 
