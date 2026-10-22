@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title></title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="login">
+                <h2>Login</h2>
+                <label>Usuario</label>
+                <br>
+                <input type="text" id="user">
+                <br>
+                <label>Contra</label>
+                <br>
+                <input type="text" id="pass">
+                <br>
+                <button onclick="login()">Inciar</button>
+            </div>
+        </div>
+        <div id="form" style="display: none;">
+            <h2>Nueva incidencia</h2>
+
+            <label>Título</label>
+            <input type="text" id="titulo">
+
+            <br><br>
+
+            <label>Descripción</label>
+            <input type="text" id="contexto">
+
+            <br><br>
+
+            <label>Categoría</label>
+            <select id="categoria">
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+            </select>
+
+            <br><br>
+
+            <label>Estado</label>
+            <select id="estado">
+                <option value="abierto">Abierto</option>
+                <option value="pendiente">Pendiente</option>
+                <option value="cerrado">Cerrado</option>
+            </select>
+
+            <br><br>
+
+            <button onclick="guardar()">Guardar incidencia</button>
+        </div> 
+        <div id="tickets">
+            <div id="hardwar">
+
+            </div>
+            <div id="softwar">
+
+            </div>
+        </div>
+        <script src="JS/script.js"></script>
+    </body>
+</html>

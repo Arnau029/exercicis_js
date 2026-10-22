@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        div{
+            display: grid;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 400px;
+            margin: auto;
+            padding: 10px;
+        }
+        h2{
+            text-align: center;
+        }
+        input{
+            display: block;
+            margin: 10px;
+        }
+        span{
+            font-size: 18px;
+            margin-bottom: 5px;
+            color: red;
+            text-align: center;
+        }
+        #resultado{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Login</h2>
+        <label for="user">Username</label>
+        <input type="text" id="user">
+        <span id="MailMensaje"></span>
+        <br>
+        <label for="pass">Password</label>
+        <input type="text" id="Password">
+        <span id="PaswordMensaje"> </span>
+        <br>
+        <button onclick="login()">Login</button>
+        <script src="JS/script.js"></script>
+    </div>
+    <div id="resultado">
+        <h4 id="correcto"></h4>
+    </div>
+</body>
+</html>

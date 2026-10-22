@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h2{
+            text-align: center;
+        }
+        div{
+            width: 300px;
+            border: 1px solid black;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        div#galeria{
+            text-align: center;
+        }
+        div#galeria img{
+            width: 130px;
+            border-radius: 10px;
+        }
+        div#Controles{
+            padding: 20px;
+            width: 200px;
+        }
+        input{
+            display: block;
+            text-align: left;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Galeria fotos</h2>
+    <div id="galeria">
+        <img src="img/Business_tux.png" alt="" id="f1">
+        <img src="img/Linux_mascot_tux.png" alt="" id="f2">
+        <img src="img/tux-clipart-original.png" alt="" id="f3">
+        <img src="img/tux.png" alt="" id="f4">
+    </div>
+    <h2>Controles</h2>
+    <div id="Controles">
+        <label for="nFoto">Numero de foto</label>
+        <input type="number" name="" id="nFoto">
+
+        <label for="alto">Alto</label>
+        <input type="number"name="" id="alto">
+        <label for="ancho">Ancho</label>
+        <input type="number"name="" id="ancho">
+        <label for="url">URL</label>
+        <input type="text" name="" id="url">
+        <button onclick="modificar()">Modificar Foto</button>
+
+    </div>
+    <script src="JS/galeria.js"></script>
+</body>
+</html>

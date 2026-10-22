@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C09</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--
+        Simulacion de tiquetin / incidencies
+            -localStorage
+            -CSS minim
+            -validar usuari
+            -formulari con porblemes 7 tipus / 2 categories
+            -estats (obert,proces,tancat)
+            -guardar historial
+    -->
+    <div id="contain">
+        <div id="login">
+            <label>Usuario</label>
+            <br>
+            <input type="text" id="name"required>
+            <br>
+            <label>password</label>
+            <br>
+            <input type="text" id="password" required>
+            <br>
+            <button onclick="login()">Iniciar</button>
+        </div>
+    </div>
+    <div id="contain2" style="display: none;">
+        <div class="barr">
+            <button onclick="">Cerrar sesion</button>
+        </div>
+        <div>
+        <div class="formulario">
+            <h1>Formulario</h1>
+            <label for="problema">Problema</label>
+            <br>
+            <input type="text" id="pr">
+            <br>
+            <label for="cotexto">Cotexto</label>
+            <br>
+            <input type="text" id="ct">
+            <br>
+            <label>tipo</label>
+            <select id="tipos">
+                <option value="hardware">hardware</option>
+                <option value="software">software</option>
+            </select>
+            <br>
+            <label>Estado</label>
+            <select id="selecionar">
+                <option value="obert">Abierto</option>
+                <option value="cerrado">Cerrado</option>
+                <option value="proceso">En proceso</option>
+            </select>
+            <br>
+            <button onclick="guardar()">Enviar</button>
+        </div>
+        <div id="tickets">
+            <div id="hardware">
+
+            </div>
+            <div id="software">
+
+            </div>
+        </div>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>

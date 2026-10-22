@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        #bstart{
+            display: grid;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 400px;
+            padding: 10px;
+        }
+        #juego{  
+            display: grid;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: center;
+            width: 400px;
+            padding: 10px;
+            display: none;
+        }
+        
+    </style>
+</head>
+<body>
+<div id="bstart">
+    <button onclick="bstart()" id="bstart">Start the game</button>
+</div>
+<div id="juego">
+    <h3 id="contador">TIENES 30 SEGUNDOS PARA ADIVINAR EL NUMERO</h3>
+    <input type="number" id="ranumero">
+    <button onclick="rannumero()">COMPROVAR?</button>
+</div>
+    <script src="JS/script.js"></script>
+</body>
+</html>

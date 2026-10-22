@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>C11</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div id="container">
+            <div id="login">
+                <h2>Login</h2>
+                <label>Nobre</label>
+                <br>
+                <input type="text" id="name">
+                <br>
+                <label>password</label>
+                <br>
+                <input id="pass">
+                <br>
+                <button onclick="iniciar()">Iniciar</button>
+            </div>
+        </div>
+        <div id="app" style="display: none;">
+            <div class="bar">
+                <button onclick="cerrar()">Cerrar</button>
+            </div>
+            <div class="formulario">
+                <h2>Nueva tarea</h2>
+                <label>Titulo</label>
+                <input type="text" id="titulo">
+                <label>Descripcio</label>
+                <input type="text" id="contexto">
+                <label>categoria</label>
+                <select id="categoria">
+                    <option value="Trabajo">Trabajo</option>
+                    <option value="Estudios">Estudios</option>
+                </select>
+                <label >Estado</label>
+                <select id="estdao">
+                    <option value="abierto">abierto</option>
+                    <option value="cerrado">cerrado</option>
+                    <option value="pendiente">pendiente</option>
+                </select>
+                <button onclick="guardar()">Guardar</button>
+            </div>
+        </div>
+        <div id="tickets" style="display: none;">
+            <div id="trabajo" class="trabajo">
+
+            </div>
+            <div id="estudios" class="estudios">
+
+            </div>
+        </div>
+        <script src="JS/script.js"></script>
+    </body>
+</html>

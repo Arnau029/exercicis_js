@@ -1,0 +1,315 @@
+/* =========================================
+   1. ESTILOS GENERALES
+========================================= */
+* {
+    box-sizing: border-box; /* Evita que el padding rompa los anchos */
+}
+
+body {
+    background-color: #f0f2f5; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    color: #333333;
+}
+
+/* =========================================
+   2. ESTILOS DE FORMULARIOS (Inputs y Botones)
+========================================= */
+label {
+    display: block; /* Pone las etiquetas encima de los inputs */
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Inputs de texto, número y contraseña */
+input[type="text"], 
+input[type="number"], 
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, 
+input[type="number"]:focus, 
+input[type="password"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.2);
+}
+
+/* Input de Foto (File) */
+input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px dashed #cccccc; /* Borde punteado para indicar zona de subida */
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #f8f9fa; /* Fondo ligeramente gris */
+    color: #555;
+    cursor: pointer;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+input[type="file"]:hover, 
+input[type="file"]:focus {
+    border-color: #007bff;
+    background-color: #f1f7ff; /* Tono azulado suave al pasar el ratón */
+    outline: none;
+}
+
+/* Estilo para el botón de "Seleccionar archivo" */
+input[type="file"]::file-selector-button {
+    padding: 8px 16px;
+    margin-right: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="file"]::file-selector-button:hover {
+    background-color: #0056b3;
+}
+
+/* Botones generales */
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button:active {
+    transform: scale(0.98); /* Pequeño efecto al hacer clic */
+}
+
+/* =========================================
+   3. SECCIÓN: LOGIN (#centrar y #Login)
+========================================= */
+#centrar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#Login {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); 
+    width: 100%;
+    max-width: 350px; 
+}
+
+#Login h2 {
+    text-align: center;
+    margin-top: 0;
+    color: #1a1a1a;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   4. SECCIÓN: RELLENAR DATOS (#rellenar)
+========================================= */
+#rellenar {
+    width: 90%;
+    max-width: 600px; /* Más ancho para que sea cómodo de leer */
+    margin: 40px auto; /* Lo centra horizontalmente con espacio arriba/abajo */
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Espacio entre los bloques */
+}
+
+#rellenar h2 {
+    text-align: center;
+    color: #1a1a1a;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+/* Diseño de las "tarjetas" del formulario (fieldset) */
+fieldset {
+    background-color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin: 0;
+}
+
+legend {
+    background-color: #007bff;
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Ajustes para los Radio Buttons (Alto, Medio, Bajo) */
+input[type="radio"] {
+    margin-right: 5px;
+    accent-color: #007bff; /* Pone los círculos en azul */
+}
+
+input[type="radio"] + label {
+    display: inline-block; /* Evita que hagan salto de línea */
+    margin-right: 15px;
+    font-weight: normal;
+    cursor: pointer;
+}
+
+/* Cuadros donde se muestra la lista guardada de estudios/idiomas */
+#mostrar, #mostrar1 {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    border-left: 4px solid #007bff;
+}
+
+#mostrar p, #mostrar1 p {
+    margin: 0 0 10px 0;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Botón especial para finalizar el CV */
+button[onclick="finalizarCV()"] {
+    background-color: #28a745; /* Color verde para indicar éxito/finalizar */
+    padding: 15px;
+    font-size: 18px;
+    margin-top: 10px;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+button[onclick="finalizarCV()"]:hover {
+    background-color: #218838;
+}
+
+/* =========================================
+   5. SECCIÓN: CV FINAL VIVO Y MODERNO (#crerf)
+========================================= */
+#crerf {
+    background-color: #ffffff;
+    width: 90%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px 60px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-top: 8px solid #007bff; /* Franja azul superior */
+    color: #333333;
+}
+
+/* Título superior (Curriculum vitae) */
+#crerf h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+}
+
+/* --- BLOQUE SUPERIOR (FOTO Y DATOS) --- */
+#fotoCV {
+    display: flex;
+    align-items: center; /* Centra verticalmente la foto con los textos */
+    gap: 40px; 
+    margin-bottom: 50px;
+    background-color: #f8f9fa; /* Fondo gris muy suave */
+    padding: 30px;
+    border-radius: 12px;
+}
+
+/* Contenedor de la foto (#fotoC) */
+#fotoC {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Foto completamente redonda */
+    border: 4px solid #007bff; /* Borde azul */
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.2); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden; /* Corta la imagen para que encaje en el círculo */
+    background-color: #ffffff;
+}
+
+/* Imagen de la foto que ponga JavaScript */
+.foto-cv {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Llena el círculo sin deformarse */
+}
+
+/* Zona de datos a la derecha (#datosCV) */
+#datosCV {
+    flex-grow: 1; 
+}
+
+#datosCV h2 {
+    margin-top: 0;
+    font-size: 22px;
+    color: #0056b3; /* Azul oscuro para el subtítulo */
+    margin-bottom: 15px;
+}
+
+/* Textos personales (#datosC) */
+#datosC p {
+    margin: 0 0 10px 0;
+    font-size: 16px;
+    color: #444444;
+    line-height: 1.6;
+}
+
+/* --- BLOQUES INFERIORES (ESTUDIOS E IDIOMAS) --- */
+.estudiosCV, .idiomasCV {
+    margin-bottom: 40px;
+}
+
+.estudiosCV h2, .idiomasCV h2 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 20px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #e9ecef; /* Línea separadora sutil */
+}
+
+/* Diseño de los datos guardados (tarjetas pequeñas con barra azul) */
+#estudiosC p, #idiomasC p {
+    margin: 0 0 15px 0;
+    font-size: 16px;
+    color: #555555;
+    background-color: #f8f9fa; /* Fondo gris claro */
+    padding: 15px 20px;
+    border-left: 5px solid #007bff; /* Barra azul decorativa */
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}

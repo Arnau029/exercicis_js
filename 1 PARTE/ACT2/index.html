@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de llaminadures</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--login el container es para centrar que sino se rompe todo-->
+    <div id="container">
+        <div id="login">
+            <h2>Login llaminadures</h2>
+            <label>Usuario</label>
+            <input type="text" id="contra">
+            <br>
+            <label>Password</label>
+            <input type="text" id="pass">
+            <br>
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+    <!--Pagina de tienda-->
+    <div id="tiendas" style="display: none;">
+        <!--barra-->
+        <div class="cab">
+            <button onclick="cerrar_sesion()">Cerrar sesión</button>
+            <div class="cab2">
+                <button><a href="#listaCesta">CESTA</a></button>
+                <button><a href="#historial">PEDIDOS</a></button>
+            </div>
+        </div>
+        <!--compra seccion-->
+        <section>
+            <h2>COMPRAR CHUCHES</h2>
+            <!--BOX regalices -->
+            <fieldset class="caja productos">
+                <legend>Regalices</legend>
+                <div>
+                    <label id="r1">Regaliz rojo</label>
+                    <input type="number" id="regaliz1" min="0" value="0">
+                </div>
+                <div>
+                    <label id="r2">Regaliz negro</label>
+                    <input type="number" id="regaliz2" min="0" value="0">
+                </div>
+                <div>
+                    <label id="r3">Regaliz de fresa</label>
+                    <input type="number" id="regaliz3" min="0" value="0">
+                </div>
+            </fieldset>
+            <!--BOX caramelos -->
+            <fieldset class="caja productos">
+                <legend>Caramelos</legend>
+                <div>
+                    <label id="c1">Caramelos de menta</label>
+                    <input type="number" id="caramelo1" min="0" value="0">
+                </div>
+                <div>
+                    <label id="c2">Caramelos de limón</label>
+                    <input type="number" id="caramelo2" min="0" value="0">
+                </div>
+                <div>
+                    <label id="c3">Caramelos de naranja</label>
+                    <input type="number" id="caramelo3" min="0" value="0">
+                </div>
+                <div>
+                    <label id="c4">Caramelos de cereza</label>
+                    <input type="number" id="caramelo4" min="0" value="0">
+                </div>
+            </fieldset>
+            <button onclick="anadirCesta()">Agregar a la cesta</button>
+        </section>
+        <!--cesta seccion-->
+        <section>
+            <h2>CESTA</h2>
+            <div class="caja">
+                <div id="listaCesta">Esta vacia tu cesta</div>
+            </div>
+            <button onclick="comprar()">COMPRAR</button>
+        </section>
+        <!--historial seccion-->
+        <section>
+            <h2>PEDIDOS</h2>
+            <div id="historial">
+d            </div>
+        </section>
+    </div>
+    <script src="JS/script.js"></script>
+</body>
+</html>

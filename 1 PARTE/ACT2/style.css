@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff0f6;
+    color: #38233d;
+    text-align: center;
+}
+
+/* Login */
+#container {
+    width: 280px;
+    margin: 250px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.893);
+    border-radius: 10px;
+}
+
+#container input {
+    display: block;
+    margin: 10px auto;
+}
+
+/*bar */
+.cab {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #800467;
+}
+
+.cab2 {
+    display: flex;
+    gap: 10px;
+}
+
+.cab button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 22px;
+}
+.cab2 a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Cajas pequeñas */
+.caja {
+    width: 320px;
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #d8a9c8;
+    border-radius: 10px;
+}
+
+/* Productos */
+.productos div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.productos label {
+    text-align: left;
+    font-size: 14px;
+}
+
+input {
+    width: 65px;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+/* Botones */
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    border: none;
+    border-radius: 6px;
+    background-color: #9b59b6;
+    color: white;
+    cursor: pointer;
+}
+
+/* Caja pedido */
+.pedido {
+    width: 320px;
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid #d8a9c8;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.pedido h3 {
+    color: #c13d8b;
+}
+
+/*separaciones*/
+section {
+    padding: 20px;
+    border-bottom: 5px solid black;
+}

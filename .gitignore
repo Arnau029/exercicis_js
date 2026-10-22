@@ -1,0 +1,16 @@
+# Environment variables
+docker/.env
+.env
+
+# MongoDB data
+docker/mongo-data/
+
+# macOS
+.DS_Store
+
+# Logs
+*.log
+
+node_modules/
+dist/
+

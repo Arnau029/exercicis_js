@@ -1,0 +1,35 @@
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: aliceblue;
+}
+
+#contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#login{
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    width: 100%;
+    max-width: 200px; 
+}
+
+.barr{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: wheat;
+}
+.formulario{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background-color: aliceblue;
+}
